@@ -4,8 +4,7 @@ A simple and elegant text animation demo using GSAP (GreenSock Animation Platfor
 
 ## Demo
 
-View the live demo: [GSAP Text Animation](https://gsap-text-animation-hyy7v0450-ruofanweis-projects.vercel.app/)
-
+View the live demo: [GSAP Text Animation](https://gsap-text-animation-two.vercel.app/)
 
 
 ## How It Works
