@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoother Text Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+        .text-container {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            overflow: hidden;
+        }
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(100px) scale(1.5);
+            filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container" id="text">
+        <span class="letter">T</span>
+        <span class="letter">e</span>
+        <span class="letter">a</span>
+        <span class="letter">m</span>
+        <span class="letter"> </span>
+        <span class="letter">T</span>
+        <span class="letter">a</span>
+        <span class="letter">i</span>
+        <span class="letter">w</span>
+        <span class="letter">a</span>
+        <span class="letter">n</span>
+        <span class="letter">!</span>
+        <span class="letter"> </span>
+        <span class="letter">T</span>
+        <span class="letter">e</span>
+        <span class="letter">a</span>
+        <span class="letter">m</span>
+        <span class="letter"> </span>
+        <span class="letter">T</span>
+        <span class="letter">a</span>
+        <span class="letter">i</span>
+        <span class="letter">w</span>
+        <span class="letter">a</span>
+        <span class="letter">n</span>
+        <span class="letter">!</span>
+        <span class="letter"> </span>
+        <span class="letter">T</span>
+        <span class="letter">a</span>
+        <span class="letter">i</span>
+        <span class="letter">w</span>
+        <span class="letter">a</span>
+        <span class="letter">n</span>
+        <span class="letter"> </span>
+        <span class="letter">i</span>
+        <span class="letter">s</span>
+        <span class="letter"> </span>
+        <span class="letter">a</span>
+        <span class="letter"> </span>
+        <span class="letter">g</span>
+        <span class="letter">r</span>
+        <span class="letter">e</span>
+        <span class="letter">a</span>
+        <span class="letter">t</span>
+        <span class="letter"> </span>
+        <span class="letter">c</span>
+        <span class="letter">o</span>
+        <span class="letter">u</span>
+        <span class="letter">n</span>
+        <span class="letter">t</span>
+        <span class="letter">r</span>
+        <span class="letter">y</span>
+        <span class="letter">!</span>
+    </div>
+
+    <script>
+        let tl = gsap.timeline();
+        
+        tl.to(".letter", {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            filter: "blur(0px)",
+            duration: 1.2,
+            stagger: 0.03,
+            ease: "expo.out"
+        });
+    </script>
+</body>
+</html>
